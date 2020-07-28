@@ -1,6 +1,6 @@
 {
   "name": "lit-resizable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A resizable element for Lit Element",
   "main": "dist/lit-resizable.js",
   "module": "dist/lit-resizable.js",
@@ -14,6 +14,7 @@
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix"
   },
   "author": "Zack Arnett",
+  "repository": "https://github.com/zsarnett/Lit-Resizable",
   "license": "MIT",
   "dependencies": {
     "lit-draggable": "0.0.1",
