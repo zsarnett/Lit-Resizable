@@ -1,0 +1,28 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "lit-resizable",
+      "path": "./src\\lit-resizable.ts",
+      "attributes": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "handle",
+          "type": "HTMLElement | undefined"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    }
+  ]
+}
