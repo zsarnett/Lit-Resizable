@@ -1,6 +1,6 @@
 {
   "name": "lit-resizable",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A resizable element for Lit Element",
   "main": "dist/lit-resizable.js",
   "module": "dist/lit-resizable.js",
