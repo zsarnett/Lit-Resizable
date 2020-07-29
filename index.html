@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="dist/lit-resizable-wrapper.js" type="module"></script>
+    <title>Lit Resizable</title>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100%;
+        height: 100vh;
+        background-color: #eee;
+        position: relative;
+      "
+    >
+      <lit-resizable-wrapper style="--item-width: 150px; --item-height: 100px;">
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 22px;
+            line-height: var(--item-height);
+            margin: auto;
+          "
+        >
+          Resize Me!
+        </div>
+      </lit-resizable-wrapper>
+    </div>
+  </body>
+</html>
