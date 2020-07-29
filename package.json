@@ -1,6 +1,6 @@
 {
   "name": "lit-resizable",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A resizable element for Lit Element",
   "main": "dist/lit-resizable.js",
   "module": "dist/lit-resizable.js",
@@ -17,7 +17,7 @@
   "repository": "https://github.com/zsarnett/Lit-Resizable",
   "license": "MIT",
   "dependencies": {
-    "lit-draggable": "0.0.6",
+    "lit-draggable": "0.0.9",
     "lit-element": "^2.3.1",
     "lit-html": "^1.2.1"
   },
