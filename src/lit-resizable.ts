@@ -94,8 +94,6 @@ export class LitResizable extends LitElement {
         bottom: 0px;
         right: 0px;
         cursor: se-resize;
-        user-select: none;
-        touch-action: none;
       }
     `;
   }
