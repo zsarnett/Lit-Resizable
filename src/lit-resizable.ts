@@ -56,7 +56,10 @@ export class LitResizable extends LitElement {
     `;
   }
 
-  private _resizeStart(): void {
+  private _resizeStart(ev: Event): void {
+    ev.preventDefault();
+    ev.stopPropagation();
+
     this.startWidth = this.clientWidth;
     this.startHeight = this.clientHeight;
 
@@ -64,6 +67,7 @@ export class LitResizable extends LitElement {
   }
 
   private _resize(ev: LGLDomEvent<DraggingEvent>): void {
+    ev.preventDefault();
     ev.stopPropagation();
 
     if (this.startWidth === undefined || this.startHeight === undefined) {
@@ -87,7 +91,10 @@ export class LitResizable extends LitElement {
     });
   }
 
-  private _resizeEnd(): void {
+  private _resizeEnd(ev: Event): void {
+    ev.preventDefault();
+    ev.stopPropagation();
+
     this.startWidth = undefined;
     this.startHeight = undefined;
 
@@ -101,12 +108,20 @@ export class LitResizable extends LitElement {
         display: block;
       }
 
-      .icon-tabler-arrows-diagonal-2 {
+      lit-draggable {
         position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 18px;
-        height: 18px;
+        left: var(--resize-handle-position-left, unset);
+        top: var(--resize-handle-postion-top, unset);
+        bottom: var(--resize-handle-position-bottom, 0);
+        right: var(--resize-handle-postion-right, 0);
+        width: var(--resize-handle-width, 18px);
+        height: var(--resize-handle-height, 18px);
+        user-select: none;
+      }
+
+      .icon-tabler-arrows-diagonal-2 {
+        width: 100%;
+        height: 100%;
         stroke-width: 1.5;
         stroke: #607d8b;
         fill: none;
