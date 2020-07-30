@@ -6,6 +6,7 @@ import {
   CSSResult,
   css,
   property,
+  svg,
 } from "lit-element";
 
 import "lit-draggable";
@@ -35,7 +36,21 @@ export class LitResizable extends LitElement {
               @dragStart=${this._resizeStart}
               @dragEnd=${this._resizeEnd}
             >
-              ${!this.handle ? "" : html`${this.handle}`}
+              ${!this.handle
+                ? svg`
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon-tabler-arrows-diagonal-2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" />
+                      <polyline points="16 20 20 20 20 16" />
+                      <line x1="14" y1="14" x2="20" y2="20" />
+                      <polyline points="8 4 4 4 4 8" />
+                      <line x1="4" y1="4" x2="10" y2="10" />
+                    </svg>
+                  `
+                : html`${this.handle}`}
             </lit-draggable>
           `}
     `;
@@ -86,13 +101,17 @@ export class LitResizable extends LitElement {
         display: block;
       }
 
-      .default-handle {
-        background-color: red;
+      .icon-tabler-arrows-diagonal-2 {
         position: absolute;
-        width: 10px;
-        height: 10px;
-        bottom: 0px;
-        right: 0px;
+        bottom: 0;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        stroke-width: 1.5;
+        stroke: #607d8b;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
         cursor: se-resize;
       }
     `;

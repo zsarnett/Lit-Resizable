@@ -15,12 +15,8 @@ import "./lit-resizable";
 @customElement("lit-resizable-wrapper")
 export class LitResizableWrapper extends LitElement {
   protected render(): TemplateResult {
-    const handle = document.createElement("div");
-    handle.classList.add("default-handle");
-
     return html`
       <lit-resizable
-        .handle=${handle}
         @resize=${this._resize}
         @resizeStart=${this._resizeStart}
         @resizeEnd=${this._resizeEnd}
