@@ -8,6 +8,7 @@ export default [
     output: {
       file: "dist/lit-resizable.js",
       format: "es",
+      sourcemap: "inline",
     },
     plugins: [
       typescript(),
